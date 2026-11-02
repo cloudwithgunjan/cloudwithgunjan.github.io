@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8f6ef"/>
+      <stop offset="45%" stop-color="#d4efe3"/>
+      <stop offset="100%" stop-color="#c5e6d4"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#128a96"/>
+      <stop offset="100%" stop-color="#0a6e7a"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fafc" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#e2eef1" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+
+  <!-- soft atmospheric orbs -->
+  <circle cx="1180" cy="220" r="180" fill="#1a9aa8" opacity="0.12"/>
+  <circle cx="1380" cy="520" r="220" fill="#7eb8c0" opacity="0.16"/>
+  <circle cx="980" cy="680" r="140" fill="#0a6e7a" opacity="0.08"/>
+
+  <!-- grid plane -->
+  <g opacity="0.35" stroke="#3a4d5a" stroke-width="1">
+    <path d="M720 820 L1520 620"/>
+    <path d="M700 760 L1500 560"/>
+    <path d="M680 700 L1480 500"/>
+    <path d="M660 640 L1460 440"/>
+    <path d="M740 860 L780 520"/>
+    <path d="M860 830 L900 490"/>
+    <path d="M980 800 L1020 460"/>
+    <path d="M1100 770 L1140 430"/>
+    <path d="M1220 740 L1260 400"/>
+    <path d="M1340 710 L1380 370"/>
+    <path d="M1460 680 L1500 340"/>
+  </g>
+
+  <!-- architecture nodes -->
+  <g filter="url(#soft)">
+    <rect x="980" y="210" width="220" height="120" rx="4" fill="url(#panel)" stroke="#0a6e7a" stroke-width="2"/>
+    <rect x="1000" y="236" width="70" height="10" rx="2" fill="#0a6e7a"/>
+    <rect x="1000" y="258" width="140" height="8" rx="2" fill="#5c7383" opacity="0.45"/>
+    <rect x="1000" y="278" width="110" height="8" rx="2" fill="#5c7383" opacity="0.3"/>
+    <circle cx="1165" cy="250" r="14" fill="url(#node)"/>
+
+    <rect x="1240" y="360" width="200" height="110" rx="4" fill="url(#panel)" stroke="#0a6e7a" stroke-width="2"/>
+    <rect x="1260" y="386" width="60" height="10" rx="2" fill="#0a6e7a"/>
+    <rect x="1260" y="408" width="130" height="8" rx="2" fill="#5c7383" opacity="0.45"/>
+    <rect x="1260" y="428" width="95" height="8" rx="2" fill="#5c7383" opacity="0.3"/>
+
+    <rect x="900" y="430" width="210" height="130" rx="4" fill="url(#panel)" stroke="#0a6e7a" stroke-width="2"/>
+    <rect x="920" y="458" width="80" height="10" rx="2" fill="#0a6e7a"/>
+    <rect x="920" y="480" width="150" height="8" rx="2" fill="#5c7383" opacity="0.45"/>
+    <rect x="920" y="500" width="120" height="8" rx="2" fill="#5c7383" opacity="0.3"/>
+    <circle cx="1065" cy="480" r="16" fill="url(#node)"/>
+
+    <rect x="1120" y="580" width="240" height="120" rx="4" fill="url(#panel)" stroke="#0a6e7a" stroke-width="2"/>
+    <rect x="1140" y="608" width="90" height="10" rx="2" fill="#0a6e7a"/>
+    <rect x="1140" y="630" width="160" height="8" rx="2" fill="#5c7383" opacity="0.45"/>
+    <rect x="1140" y="650" width="130" height="8" rx="2" fill="#5c7383" opacity="0.3"/>
+  </g>
+
+  <!-- connection lines -->
+  <g stroke="#0a6e7a" stroke-width="2" opacity="0.55">
+    <path d="M1090 330 L1005 430"/>
+    <path d="M1200 330 L1340 360"/>
+    <path d="M1050 560 L1240 580"/>
+    <path d="M1340 470 L1240 580"/>
+  </g>
+
+  <!-- agent / MCP accent dots -->
+  <g>
+    <circle cx="1088" cy="380" r="6" fill="#7eb8c0"/>
+    <circle cx="1220" cy="500" r="6" fill="#1a9aa8"/>
+    <circle cx="1180" cy="555" r="5" fill="#7eb8c0"/>
+  </g>
+
+  <!-- left fade so text stays readable -->
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#eef8f2" stop-opacity="0.97"/>
+      <stop offset="42%" stop-color="#eef8f2" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#eef8f2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="980" height="1000" fill="url(#fade)"/>
+</svg>
